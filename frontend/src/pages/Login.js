@@ -140,7 +140,7 @@ export default function Login() {
             <div className="text-center mt-5">
               <p>
                 Don't have an account?{" "}
-                <Link to="/b4/register" style={{ color: "#cc5588" }}>
+                <Link to="/register" style={{ color: "#cc5588" }}>
                   Register here
                 </Link>
               </p>

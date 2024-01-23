@@ -31,7 +31,7 @@ const Home = () => {
         <footer className="text-light">
           <p className="footer-text">
             <i className="bi bi-envelope-at-fill"></i>
-            bonafe.lehi@gmail.com
+            <a>bonafe.lehi@gmail.com</a>
           </p>
         </footer>
       </Container>
