@@ -22,7 +22,7 @@ export default function AppNavbar() {
         // Handle the logout logic here
         // For example, redirecting to the logout route
         unsetUser();
-        window.location.href = "/b4/login";
+        window.location.href = "/login";
       }
     });
   };
@@ -46,7 +46,7 @@ export default function AppNavbar() {
             <span className="divider mx-2 d-none d-lg-flex justify-content-center align-items-center">
               |
             </span>
-            <Nav.Link as={NavLink} to="/b4/products">
+            <Nav.Link as={NavLink} to="/products">
               SHOP <i className="bi bi-shop mx-1"></i>
             </Nav.Link>
             {user.id !== null && user.isAdmin === true && (
@@ -54,7 +54,7 @@ export default function AppNavbar() {
                 <span className="divider mx-2 d-none d-lg-flex justify-content-center align-items-center">
                   |
                 </span>
-                <Nav.Link as={NavLink} to="/b4/orders">
+                <Nav.Link as={NavLink} to="/orders">
                   ORDERS <i className="bi bi-truck mx-1"></i>
                 </Nav.Link>
               </>
@@ -72,7 +72,7 @@ export default function AppNavbar() {
                 </>
               ) : (
                 <>
-                  <Nav.Link as={NavLink} to="/b4/cart/get-cart">
+                  <Nav.Link as={NavLink} to="/cart/get-cart">
                     <i class="bi bi-cart3"></i>
                   </Nav.Link>
                   <span className="divider mx-3 d-none d-lg-flex justify-content-center align-items-center">
@@ -92,11 +92,7 @@ export default function AppNavbar() {
               )
             ) : (
               <>
-                <Nav.Link
-                  as={NavLink}
-                  to="/b4/register"
-                  className="register-link"
-                >
+                <Nav.Link as={NavLink} to="/register" className="register-link">
                   REGISTER
                 </Nav.Link>
                 <span className="divider mx-3 d-none d-lg-flex justify-content-center align-items-center">
@@ -104,7 +100,7 @@ export default function AppNavbar() {
                 </span>
                 <Link
                   as={NavLink}
-                  to="/b4/login"
+                  to="/login"
                   style={{ textDecoration: "none" }}
                 >
                   <Button className="btn-pink rounded-0 px-5">LOG IN</Button>

@@ -30,25 +30,24 @@ function App() {
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/users/details`, {
       headers: {
-        Authorization: `Bearer ${ localStorage.getItem('access') }`
-      }
+        Authorization: `Bearer ${localStorage.getItem("access")}`,
+      },
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.result && typeof data.result.id !== undefined) {
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.result && typeof data.result.id !== undefined) {
           setUser({
             id: data.result.id,
-            isAdmin: data.result.isAdmin
-          })
-        }
-        else{
+            isAdmin: data.result.isAdmin,
+          });
+        } else {
           setUser({
             id: null,
-            isAdmin: null
-          })
+            isAdmin: null,
+          });
         }
-    })
-  },[])
+      });
+  }, []);
 
   return (
     <UserProvider value={{ user, setUser, unsetUser }}>
@@ -56,13 +55,13 @@ function App() {
         <Container fluid>
           <AppNavbar />
           <Routes>
-          <Route path="/" element={<Home />} />
-            <Route path="/b4/products" element={<Products />} />
-            <Route path="/b4/orders" element={<UserOrders />} />
-            <Route path="/b4/cart/get-cart" element={<Cart />} />
-            <Route path="/b4/register" element={<Register />} />
-            <Route path="/b4/login" element={<Login />} />
-            <Route path="/b4/products/:productId" element={<ProductView />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/orders" element={<UserOrders />} />
+            <Route path="/cart/get-cart" element={<Cart />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/products/:productId" element={<ProductView />} />
           </Routes>
         </Container>
       </Router>

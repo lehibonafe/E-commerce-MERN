@@ -48,21 +48,21 @@ export default function Login() {
           // setUser(data); // user = {access: adskjaslkdqwk }
           retrieveUserDetails(data.access_token);
 
-                  // Use SweetAlert for successful login
-        Swal.fire({
-          icon: 'success',
-          title: 'Success!',
-          text: data.message,
-        });
-      } else {
-        // Use SweetAlert for unsuccessful login
-        Swal.fire({
-          icon: 'error',
-          title: 'Error!',
-          text: data.message,
-        });
-      }
-    });
+          // Use SweetAlert for successful login
+          Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: data.message,
+          });
+        } else {
+          // Use SweetAlert for unsuccessful login
+          Swal.fire({
+            icon: "error",
+            title: "Error!",
+            text: data.message,
+          });
+        }
+      });
     // Clear input fields after submission
     setEmail("");
     setPassword("");
@@ -86,7 +86,7 @@ export default function Login() {
   };
 
   return user.id !== null ? (
-    <Navigate to="/b4/products" />
+    <Navigate to="/products" />
   ) : (
     <div className="container mt-5 d-flex align-items-center justify-content-center">
       <div className="row col-md-8 mt-3">
