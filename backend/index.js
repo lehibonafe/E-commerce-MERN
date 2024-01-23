@@ -47,8 +47,7 @@ mongoose.connection.once("open", () =>
 );
 
 //----------------- PORT ------------------------
-app.listen(port, (req, res) => {
-  res.send("Server is running");
+app.listen(port, () => {
   console.log(`Server is now running at ${port}`);
 });
 
