@@ -30,8 +30,8 @@ const Home = () => {
       <Container className="mt-5">
         <footer className="text-light">
           <p className="footer-text">
-            <i className="bi bi-envelope-at-fill"></i> gerald@mail.com |
-            lehi@mail.com
+            <i className="bi bi-envelope-at-fill"></i>
+            bonafe.lehi@gmail.com
           </p>
         </footer>
       </Container>
